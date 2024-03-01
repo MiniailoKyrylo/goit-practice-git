@@ -1,0 +1,107 @@
+# Git version
+git -v
+
+# Set name
+git config --global user.name "name"
+
+# Set email
+git config --global user.email "email"
+
+# Verification name and email
+git config --list
+
+# Сheck changes
+git config --list
+
+# Call help
+git "command" --help
+
+# Generation SSH-Key
+ssh-keygen -t rsa -b 4096 -C "email GitHub"
+
+# Start SSH-Agent
+eval "$(ssh-agent -s)"
+
+# Print SSH-Key
+git clone "repo-url"
+git clone "repo-url" "name for save"
+
+# Start VScode
+code "path"
+code "."
+
+# Install local repo
+git init
+
+# Connect local repo to online
+git remote add origin "SSH"
+git remote add origin "git@github.com:MiniailoKyrylo/goit-practice-git-2.git"
+
+# Verification connect
+git remote -v
+
+# Fix error connect
+git remote set-url origin "git@github.com:MiniailoKyrylo/goit-practice-git-2.git"
+
+# Status commit
+git status
+
+# Add file to commit
+git add "file"
+git add "*.txt"
+git add .
+git add "path"
+git add --all
+git add -A
+
+# Del file to commit
+git reset "file"
+git reset
+
+# Del file to commit FOREVER
+git rm --cached "file"
+
+# .gitignore
+// Ignore all .txt files
+*.txt
+// Ignore file
+config.json
+// Ignore all file in path
+path/*
+// Ignore all .txt files but not name.txt
+*.txt
+!plans.txt
+
+# Commit
+git commit -m "text"
+
+# Mod last commit
+git commit --amend
+git commit --amend -m "add a new task and item to shopping list"
+
+# Logs commit
+git log
+git log -n 2 
+git log --since=2.weeks
+git log --author="nataliia"
+
+# Stash
+git stash
+git stash save "my-comment"
+
+# Stash list
+git stash list
+
+# Load stash
+git stash apply stash@{<number_stash>}
+git stash pop
+
+# Clear stash list
+git stash clear
+
+# Push to repo online
+git push
+// Renaim new repo
+git branch -M main      // master to main
+git push -u origin main    // push
+
